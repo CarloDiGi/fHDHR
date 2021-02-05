@@ -1,0 +1,14 @@
+{
+  "webwatch":{
+            "ffmpeg_path":{
+                          "value": "none",
+                          "config_file": true,
+                          "config_web": true
+                        },
+            "origin_quality":{
+                          "value": "medium",
+                          "config_file": true,
+                          "config_web": true
+                        }
+  }
+}
