@@ -9,4 +9,11 @@ COPY ./ /app/
 WORKDIR /app
 RUN pip3 install -r requirements.txt
 
+RUN for file in ./plugins/*/requirements.txt; \
+    do \
+        cat $file >> plugins_requrements.txt;\
+    done 
+RUN ls
+RUN pip3 install -r plugins_requrements.txt
+
 ENTRYPOINT ["python3", "/app/main.py", "--config", "/app/config/config.ini"]
